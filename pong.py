@@ -9,10 +9,13 @@ screen.bgcolor("black")
 screen.title("PONG GAME")
 screen.tracer(0)
 
-paddle = Paddle()
+r_paddle = Paddle((350,0))
+l_paddle = Paddle((-350,0))
 screen.listen()
-screen.onkey(fun=paddle.move_up, key="Up")
-screen.onkey(fun=paddle.move_down, key="Down")
+screen.onkey(fun=r_paddle.move_up, key="Up")
+screen.onkey(fun=r_paddle.move_down, key="Down")
+screen.onkey(fun=l_paddle.move_up, key="w")
+screen.onkey(fun=l_paddle.move_down, key="s")
 
 
 game_is_on = True
