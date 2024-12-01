@@ -18,6 +18,7 @@ screen.onkey(fun=l_paddle.move_up, key="w")
 screen.onkey(fun=l_paddle.move_down, key="s")
 
 
+
 game_is_on = True
 while game_is_on:
     screen.update()
