@@ -1,13 +1,16 @@
 from turtle import Screen
 from padle import Paddle
-
+from ball import Ball
 
 screen = Screen()
+ball = Ball()
+
 
 screen.setup(width=800,height=600)
 screen.bgcolor("black")
 screen.title("PONG GAME")
 screen.tracer(0)
+
 
 r_paddle = Paddle((350,0))
 l_paddle = Paddle((-350,0))
@@ -21,6 +24,7 @@ screen.onkey(fun=l_paddle.move_down, key="s")
 
 game_is_on = True
 while game_is_on:
+    ball.move()
     screen.update()
 
 screen.exitonclick()
